@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.Body404{
+    background: #d8d8d8;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contenedor404{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+    border-radius: 13px;
+    background: #fefefe;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
+}
+
+.Text404{
+    display: flex; 
+    flex-direction: column;  
+}
+
+.T404{
+    font-size: 200px;
+    color: #dadada;
+}
+
+.T2{
+    font-size: 25px;
+    color: #6a6a6a;
+}
+
+.P404{
+    max-width: 300px;
+    font-size: 16px;
+    color: #838383;
+}
+
+.Huella404{
+    position: absolute;
+    top: calc(100% - 80px);
+    left: 20px;
+}
+
+.Huelle404{
+    position: absolute;
+    top: -18px;
+    right:30px;
+    transform: rotate(180deg);
+}
+
+.Boton{
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    background: rgb(250, 52, 52);
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 30px;
+    width: max-content;
+    cursor: pointer;
+}
+
+.Boton:hover{
+    background: rgb(0, 165, 8);
+    transition: 0.75s;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
+}
