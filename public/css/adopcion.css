@@ -1,0 +1,27 @@
+ul, ol {
+  list-style: none;
+}
+body{
+}
+
+#breeds-list{
+}
+
+#dogs-ctn{
+  display: grid;
+  max-width: 1110px;
+  gap: 30px;
+  margin: auto;
+  grid-template-columns: repeat( auto-fit, minmax(330px, 1fr) );
+}
+
+#dogs-ctn li {
+  background-color: #dbdbdb;
+  border: 1px solid #ddd;
+}
+
+#dogs-ctn img{
+  width: 100%;
+  aspect-ratio: 16/11;
+  object-fit: cover;
+}
