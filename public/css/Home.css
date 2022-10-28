@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+
+
+.Header{
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    font-size: 16px;
+}
+
+.Logo{
+    color:  var(--Violet);
+}
+
+
+.Header ul li{
+    display: inline-block;
+    position: relative;
+  }
+  
+  .Header ul li::after{
+    content: '';
+    height: 3px;
+    border-radius: 10px;
+    width: 0;
+    background: #cbd3ffaf;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5;
+  }
+  
+  .Header ul li:hover::after{
+    width: 100%;
+  }
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+.svg-login{
+    height: 18px;
+    margin-bottom: -3px;
+
+}
+
+.Navegacion{
+    display: flex;
+    padding: 0 20px;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-link-Hom{
+    margin-right: 300px;
+    color: black;
+}
+
+.nav-link-sus{
+    margin-right: 420px;
+}
+
+.Contenido{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.adopt-me__ctn{
+    display: flex;
+    position: relative;
+    text-align: end;
+}
+
+.adopt-me__ctn p{
+    font-size: 120px;
+}
+
+.adopt-me__rigth{
+    position: absolute;
+    z-index: 2;
+    text-align: left;
+    left: 100%;
+    padding-left: 4px;
+}
+
+.adopt-me__rigth p{
+    color: #fefefe;
+}
+
+.adopt-me__rigth button{
+    margin-top: 51px;
+    margin-left: 8px;
+}
+
+.Boton{
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    background: rgb(250, 52, 52);
+    color: #fefefe;
+    font-size: 35px;
+    padding: 10px 30px;
+    width: max-content;
+    cursor: pointer;
+}
+
+.Boton:hover{
+    background: rgb(121, 0, 90);
+    transition: 0.75s;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
+}
+
+.Perro{
+    object-fit: cover;
+    transform: scaleX(-1);
+    width: 1000px;
+    height: 636px;
+}
