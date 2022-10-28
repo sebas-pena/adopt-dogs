@@ -1,10 +1,12 @@
 ul, ol {
   list-style: none;
 }
-body{
-}
+
 
 #breeds-list{
+  display: flex;
+  justify-content: baseline;
+  flex-wrap: wrap;
 }
 
 #dogs-ctn{
