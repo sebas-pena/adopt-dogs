@@ -7,10 +7,11 @@ const showDogs = (dogs) => {
 
     const dogElement = document.createElement("li")
     dogElement.innerHTML = `
-      <img src="${image.url}"/>
-      <p>Nombre: ${name}</p>
-      <p>Edad: ${life_span.split(" ").shift()}</p>
-      <p>El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes </p>
+      <img class="img-dog" src="${image.url}"/>
+      <p class="Parrafo">Nombre: ${name}</p>
+      <p class="Parrafo">Edad: ${life_span.split(" ").shift()}</p>
+      <p class="Parrafo">El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes </p>
+      <a href="./404.html"><button class="btn-adopt">Ver Mas</button></a>
     `
     dogsListElem.appendChild(dogElement)
   })
@@ -18,7 +19,7 @@ const showDogs = (dogs) => {
 
 const breedsListElem = document.querySelector("#breeds-list")
 
-fetch("https://api.thedogapi.com/v1/breeds", {
+fetch("https://api.thedogapi.com/v1/breeds?limit=24&page=0", {
   headers: {
     "x-api-key": "live_JP4UQPFcGaKXRrP5N5YeURrtpGhuct4Ok6byJH0N0r0vNu9OQ23kU6RYuePQ5A4u"
   }
@@ -32,6 +33,6 @@ fetch("https://api.thedogapi.com/v1/breeds", {
       breedButton.innerHTML = `<button>${name}</button>`
       breedsListElem.appendChild(breedButton)
     })
-    const dogsToShow = data.slice(0, 22)
+    const dogsToShow = data.slice(0, 24)
     showDogs(dogsToShow)
   })
