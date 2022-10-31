@@ -5,6 +5,9 @@
     font-weight: bolder;
 }
 
+/*=====================================================================================================================================================================================*/
+
+/* | HEADER| */
 
 .Header{
     padding: 20px;
@@ -24,9 +27,9 @@
 .Header ul li{
     display: inline-block;
     position: relative;
-  }
+}
   
-  .Header ul li::after{
+.Header ul li::after{
     content: '';
     height: 3px;
     border-radius: 10px;
@@ -36,11 +39,11 @@
     left: 0;
     bottom: -10px;
     transition: 0.5;
-  }
+}
   
-  .Header ul li:hover::after{
+.Header ul li:hover::after{
     width: 100%;
-  }
+}
 
 a{
     text-decoration: none;
@@ -70,6 +73,12 @@ a{
 .nav-link-sus{
     margin-right: 420px;
 }
+
+/* | FIN DE HEADER | */
+
+/*=====================================================================================================================================================================================*/
+
+/* | CONTENIDO DEL HOME | */
 
 .Contenido{
     display: flex;
@@ -128,3 +137,5 @@ a{
     width: 1000px;
     height: 636px;
 }
+
+/* | FIN DEL CONTENIDO DEL HOME | */

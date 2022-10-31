@@ -1,17 +1,156 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 ul, ol {
   list-style: none;
 }
 
+body{
+  background: #4e4083;
+}
+
+/*=====================================================================================================================================================================================*/
+
+/* | HEADER | */
+
+.Header{
+  padding: 20px;
+  width: 100%;
+  backdrop-filter: blur(3px);
+  font-size: 16px;
+  background: #142433;
+  box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
+}
+
+.Logo{
+  color:  var(--Violet);
+}
+
+.Header ul li{
+  display: inline-block;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.Header ul li::after{
+  content: '';
+  height: 3px;
+  border-radius: 10px;
+  width: 0;
+  background: #4e4083;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5;
+}
+
+.Header ul li:hover::after{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.svg-login{
+  height: 18px;
+  margin-bottom: -3px;
+}
+
+.Navegacion{
+  display: flex;
+  padding: 0 20px;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-link-Hom{
+  margin-right: 300px;
+  color: black;
+}
+
+.nav-link-sus{
+  margin-right: 420px;
+}
+
+.Cabeza{
+  display: flex;
+  background: #142433;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px 20px 15px;
+  border-radius: 0px 0px 10px 10px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-size: 30px;
+  box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* | FIN HEADER | */
+
+/*=====================================================================================================================================================================================*/
+
+/* | FILTRADO | */
+
+.Filtro{
+  display: flex;
+  align-items: center;
+  background: #142433; /* este fondo es opcional ya veremos que hacemos*/
+}
+
+.Filtro .F3 {
+  font-size: 30px;
+  padding: 15px;
+  color: #dbdbdb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 #breeds-list{
   display: flex;
   justify-content: baseline;
   flex-wrap: wrap;
+  cursor: pointer;
+}
+
+/* | FIN DE FILTRADO | */
+
+/*=====================================================================================================================================================================================*/
+
+/* | TARJETAS DE ADOPCION | */
+
+.btn-adopt{
+  margin: 15px;
+  border-radius: 7px;
+  border: none;
+  background: #9a34fa;
+  color: #fefefe;
+  font-size: 16px;
+  padding: 10px 30px;
+  width: max-content;
+  cursor: pointer;
+}
+
+.btn-adopt:hover{
+  background: rgb(121, 0, 90);
+  transition: 1s;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
+}
+
+.Parrafo{
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 #dogs-ctn{
   display: grid;
-  max-width: 1110px;
+  max-width: 1300px;
   gap: 30px;
   margin: auto;
   grid-template-columns: repeat( auto-fit, minmax(330px, 1fr) );
@@ -19,11 +158,90 @@ ul, ol {
 
 #dogs-ctn li {
   background-color: #dbdbdb;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 }
 
 #dogs-ctn img{
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 4px solid #142433;
   width: 100%;
-  aspect-ratio: 16/11;
+  height: 350px;
+  aspect-ratio: 13/12;
   object-fit: cover;
+  object-position: top;
 }
+
+/* | FIN DE TARJETAS DE ADOPCION | */
+
+/*=====================================================================================================================================================================================*/
+
+/* | Footer | */
+
+.Footer{
+  padding: 40px 0;
+  background-color: #142433;
+  margin-top: 40px;
+}
+
+.Footer .Social{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #ffffff;
+}
+
+.Footer .Social a {
+  font-size: 26px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.55;
+}
+
+.Footer .Social a:hover {
+  opacity: 0.9;
+}
+
+.Footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  color: #fdfdfd ;
+}
+
+.Footer ul a{
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.Footer ul li{
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.Footer ul li:hover{
+  opacity: 1;
+}
+
+.Footer .Copyrigth{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaaa;
+}
+
+/* | Fin Footer | */
+
+/*=====================================================================================================================================================================================*/
