@@ -1,21 +1,22 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-body{
+body {
   background: #4e4083;
 }
 
 /*=====================================================================================================================================================================================*/
-
 /* | HEADER | */
 
-.Header{
+.Header {
+  position: relative;
   padding: 20px;
   width: 100%;
   backdrop-filter: blur(3px);
@@ -24,17 +25,25 @@ body{
   box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
 }
 
-.Logo{
-  color:  var(--Violet);
+.Header nav {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: max-content;
 }
 
-.Header ul li{
+.Logo {
+  position: absolute;
+  color: #dbdbdb;
+}
+
+.Header ul li {
   display: inline-block;
   position: relative;
   color: rgb(255, 255, 255);
 }
 
-.Header ul li::after{
+.Header ul li::after {
   content: '';
   height: 3px;
   border-radius: 10px;
@@ -46,38 +55,44 @@ body{
   transition: 0.5;
 }
 
-.Header ul li:hover::after{
+.Header ul li:hover::after {
   width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: 500;
 }
 
-.svg-login{
+.nav-login {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.svg-login {
   height: 18px;
   margin-bottom: -3px;
 }
 
-.Navegacion{
+.Navegacion {
   display: flex;
+  align-items: center;
   padding: 0 20px;
+  margin: auto;
   gap: 50px;
   list-style: none;
 }
 
-.nav-link-Hom{
+.nav-link-Hom {
   margin-right: 300px;
   color: black;
 }
 
-.nav-link-sus{
-  margin-right: 420px;
-}
 
-.Cabeza{
+.Cabeza {
   display: flex;
   background: #142433;
   color: rgb(255, 255, 255);
@@ -93,30 +108,59 @@ a{
 }
 
 /* | FIN HEADER | */
-
 /*=====================================================================================================================================================================================*/
 
 /* | FILTRADO | */
 
-.Filtro{
+.filtro {
+  position: relative;
   display: flex;
   align-items: center;
-  background: #142433; /* este fondo es opcional ya veremos que hacemos*/
+  width: 300px;
+  margin: auto;
+  border-radius: 15px;
+  background: #142433;
+  /* este fondo es opcional ya veremos que hacemos*/
 }
 
-.Filtro .F3 {
-  font-size: 30px;
-  padding: 15px;
+.filtro.open {
+  border-radius: 15px 15px 0 0;
+}
+
+.filtro .F3 {
+  width: 100%;
+  background: transparent;
   color: #dbdbdb;
+  border: none;
+  font-size: 22px;
+  padding: 15px 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#breeds-list{
+#breeds-list {
+  position: absolute;
+  top: 100%;
   display: flex;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  flex-direction: column;
   justify-content: baseline;
-  flex-wrap: wrap;
   cursor: pointer;
 }
+
+#breeds-list.hidden {
+  display: none;
+}
+
+/* ESTE ES EL BOTON DEL DROPDOWN*/
+#breeds-list button {
+  width: 100%;
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+  background: #747474;
+}
+
 
 /* | FIN DE FILTRADO | */
 
@@ -124,7 +168,7 @@ a{
 
 /* | TARJETAS DE ADOPCION | */
 
-.btn-adopt{
+.btn-adopt {
   margin: 15px;
   border-radius: 7px;
   border: none;
@@ -136,24 +180,24 @@ a{
   cursor: pointer;
 }
 
-.btn-adopt:hover{
+.btn-adopt:hover {
   background: rgb(121, 0, 90);
   transition: 1s;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
 }
 
-.Parrafo{
+.Parrafo {
   padding: 10px;
   font-size: 15px;
   font-weight: bolder;
 }
 
-#dogs-ctn{
+#dogs-ctn {
   display: grid;
   max-width: 1300px;
   gap: 30px;
   margin: auto;
-  grid-template-columns: repeat( auto-fit, minmax(330px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
 #dogs-ctn li {
@@ -163,7 +207,7 @@ a{
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 }
 
-#dogs-ctn img{
+#dogs-ctn img {
   border-radius: 10px 10px 0px 0px;
   border-bottom: 4px solid #142433;
   width: 100%;
@@ -172,13 +216,3 @@ a{
   object-fit: cover;
   object-position: top;
 }
-
-/* | FIN DE TARJETAS DE ADOPCION | */
-
-/*=====================================================================================================================================================================================*/
-
-/* | Footer | */
-
-/* | Fin Footer | */
-
-/*=====================================================================================================================================================================================*/

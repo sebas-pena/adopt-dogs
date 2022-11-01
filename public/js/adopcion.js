@@ -19,7 +19,7 @@ const showDogs = (dogs) => {
 
 const breedsListElem = document.querySelector("#breeds-list")
 
-fetch("https://api.thedogapi.com/v1/breeds?limit=24&page=0", {
+fetch("https://api.thedogapi.com/v1/breeds", {
   headers: {
     "x-api-key": "live_JP4UQPFcGaKXRrP5N5YeURrtpGhuct4Ok6byJH0N0r0vNu9OQ23kU6RYuePQ5A4u"
   }
@@ -30,9 +30,17 @@ fetch("https://api.thedogapi.com/v1/breeds?limit=24&page=0", {
     data.forEach(breed => {
       const { id, name } = breed
       const breedButton = document.createElement("li")
-      breedButton.innerHTML = `<button>${name}</button>`
+      breedButton.innerHTML = `<button >${name}</button>`
       breedsListElem.appendChild(breedButton)
+      breedButton.querySelector("button").addEventListener("click", () => {
+        location.href = `adoptar.html?breed=${id}`
+      })
     })
-    const dogsToShow = data.slice(0, 24)
+    const dogsToShow = data.slice(0, 12)
     showDogs(dogsToShow)
   })
+
+document.querySelector(".F3").addEventListener("click", (e) => {
+  document.querySelector(".filtro").classList.toggle("open")
+  breedsListElem.classList.toggle("hidden")
+})

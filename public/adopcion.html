@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/adopcion.css" />
-		<link rel="stylesheet" href="css/style.css">
-		<script src="./js/adopcion.js" defer></script>
-		<title>Adopcion</title>
-	</head>
-	<body>
 
-		<div class="Header">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/adopcion.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<script src="./js/adopcion.js" defer></script>
+	<title>Adopcion</title>
+</head>
 
-			<nav >
-				<ul class="Navegacion">
-					<li class="nav-link-Hom">
-						<a class="Logo" href="./Home.html">Adopt | Dog</a>
-					</li>
-					<li>
-						<a href="./adopcion.html">Adopcion</a>
-					</li>
-					<li>
-						<a href="./404.html">Comentarios</a>
-					</li>
-					<li class="nav-link-sus">
-						<a  href="./404.html">Suscribirse</a>
-					</li>
-					<li>
-						<a href="./404.html">Login<img  class="svg-login" src="./Img/login.svg" alt=""></a>
-					</li>
-				</ul>
-			</nav>
-	
+<body>
+	<header class="Header">
+
+		<a class="Logo" href="./Home.html">Adopt | Dog</a>
+		<nav>
+			</div>
+			<ul class="Navegacion">
+				<li>
+					<a href="./adopcion.html">Adopcion</a>
+				</li>
+				<li>
+					<a href="./404.html">Comentarios</a>
+				</li>
+				<li class="nav-link-sus">
+					<a href="./404.html">Suscribirse</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="nav-login">
+			<a href="./404.html">Login<img class="svg-login" src="./Img/login.svg" alt=""></a>
 		</div>
 
-		<main>
-			<div class="Cabeza">
-				<h2>Adopta un nuevo o una nueva integrante a la familia</h2>
-			</div>
-			<div class="Filtro">
+	</header>
 
-				<h3 class="F3">Sleccionar raza:</h3>
-				<br>
-				<ul id="breeds-list"></ul>
+	<main>
+		<div class="Cabeza">
+			<h2>Adopta un nuevo o una nueva integrante a la familia</h2>
+		</div>
+		<div class="filtro">
+			<button class="F3">Seleccionar raza</button>
+			<ul id="breeds-list" class="hidden"></ul>
+		</div>
+		<br>
+		<br>
+		<ul id="dogs-ctn"></ul>
 
-			</div>
-			<br>
-			<br>
-			<ul id="dogs-ctn"></ul>
+	</main>
 
-		</main>
+	<footer class='Footer'>
+		<div class='Social'>
+			<a href=''><i class='social'>
+					<FaTwitter />
+				</i></a>
+			<a href=''><i class='social'>
+					<FaInstagram />
+				</i></a>
+			<a href=''><i class='social'>
+					<FaFacebookF />
+				</i></a>
+			<a href=''><i class='social'>
+					<FaGithub />
+				</i></a>
+		</div>
 
-		<section class='Footer'>
-			<div class='Social'>
-			  <a href=''><i class='social'><FaTwitter/></i></a>
-			  <a href=''><i class='social'><FaInstagram/></i></a>
-			  <a href=''><i class='social'><FaFacebookF/></i></a>
-			  <a href=''><i class='social'><FaGithub/></i></a>
-			</div>
-	
-			<ul class='lista'>
-			  <li>
+		<ul class='lista'>
+			<li>
 				<a href='./Home.html'>Home</a>
-			  </li>
-			  <li>
+			</li>
+			<li>
 				<a href='./adopcion.html'>Adoptar</a>
-			  </li>
-			  <li>
+			</li>
+			<li>
 				<a href='./404.html'>Comentario</a>
-			  </li>
-			  <li>
+			</li>
+			<li>
 				<a href='./404.html'>Login</a>
-			  </li>
-			</ul>
-			<p class='Copyrigth'>
+			</li>
+		</ul>
+		<p class='Copyrigth'>
 			Federico Del Rio | Pablo Peña | Gaston - Bootcamp Matea 2022
-			</p>
-		  </section>
-	</body>
+		</p>
+	</footer>
+</body>
+
 </html>
