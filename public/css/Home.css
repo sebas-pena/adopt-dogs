@@ -1,15 +1,20 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
 }
 
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 /*=====================================================================================================================================================================================*/
 
 /* | HEADER| */
 
-.Header{
+.Header {
     padding: 20px;
     position: fixed;
     top: 0;
@@ -19,17 +24,17 @@
     font-size: 16px;
 }
 
-.Logo{
-    color:  var(--Violet);
+.Logo {
+    color: var(--Violet);
 }
 
 
-.Header ul li{
+.Header ul li {
     display: inline-block;
     position: relative;
 }
-  
-.Header ul li::after{
+
+.Header ul li::after {
     content: '';
     height: 3px;
     border-radius: 10px;
@@ -40,37 +45,37 @@
     bottom: -10px;
     transition: 0.5;
 }
-  
-.Header ul li:hover::after{
+
+.Header ul li:hover::after {
     width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
 }
 
 
-.svg-login{
+.svg-login {
     height: 18px;
     margin-bottom: -3px;
 
 }
 
-.Navegacion{
+.Navegacion {
     display: flex;
     padding: 0 20px;
     gap: 50px;
     list-style: none;
 }
 
-.nav-link-Hom{
+.nav-link-Hom {
     margin-right: 300px;
     color: black;
 }
 
-.nav-link-sus{
+.nav-link-sus {
     margin-right: 420px;
 }
 
@@ -80,23 +85,23 @@ a{
 
 /* | CONTENIDO DEL HOME | */
 
-.Contenido{
+.Contenido {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.adopt-me__ctn{
+.adopt-me__ctn {
     display: flex;
     position: relative;
     text-align: end;
 }
 
-.adopt-me__ctn p{
+.adopt-me__ctn p {
     font-size: 120px;
 }
 
-.adopt-me__rigth{
+.adopt-me__rigth {
     position: absolute;
     z-index: 2;
     text-align: left;
@@ -104,16 +109,16 @@ a{
     padding-left: 4px;
 }
 
-.adopt-me__rigth p{
+.adopt-me__rigth p {
     color: #fefefe;
 }
 
-.adopt-me__rigth button{
+.adopt-me__rigth button {
     margin-top: 51px;
     margin-left: 8px;
 }
 
-.Boton{
+.Boton {
     margin: auto;
     border-radius: 20px;
     border: none;
@@ -125,13 +130,13 @@ a{
     cursor: pointer;
 }
 
-.Boton:hover{
+.Boton:hover {
     background: rgb(121, 0, 90);
     transition: 0.75s;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.438);
 }
 
-.Perro{
+.Perro {
     object-fit: cover;
     transform: scaleX(-1);
     width: 1000px;
