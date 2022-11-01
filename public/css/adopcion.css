@@ -9,7 +9,7 @@ ol {
 }
 
 body {
-  background: #4e4083;
+  background: #d7dacf;
 }
 
 /*=====================================================================================================================================================================================*/
@@ -21,7 +21,7 @@ body {
   width: 100%;
   backdrop-filter: blur(3px);
   font-size: 16px;
-  background: #142433;
+  background: #4e4083;
   box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
 }
 
@@ -48,7 +48,7 @@ body {
   height: 3px;
   border-radius: 10px;
   width: 0;
-  background: #4e4083;
+  background: #250e77;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -94,7 +94,7 @@ a {
 
 .Cabeza {
   display: flex;
-  background: #142433;
+  background: #4e4083;
   color: rgb(255, 255, 255);
   flex-direction: column;
   align-items: center;
@@ -119,7 +119,7 @@ a {
   width: 300px;
   margin: auto;
   border-radius: 15px;
-  background: #142433;
+  background: #4e4083;
   /* este fondo es opcional ya veremos que hacemos*/
 }
 
@@ -130,10 +130,11 @@ a {
 .filtro .F3 {
   width: 100%;
   background: transparent;
-  color: #dbdbdb;
+  color: #ffffff;
   border: none;
   font-size: 22px;
   padding: 15px 0;
+  font-weight: bolder;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -157,8 +158,11 @@ a {
 #breeds-list button {
   width: 100%;
   padding: 10px 0;
-  color: rgb(255, 255, 255);
-  background: #747474;
+  border: 1px solid rgba(0, 0, 0, 0.596);
+  color: rgb(7, 7, 7);
+  font-size: 22px;
+  font-weight: bolder;
+  background: #ffffff;
 }
 
 
@@ -202,7 +206,7 @@ a {
 
 #dogs-ctn li {
   background-color: #dbdbdb;
-  border: 0px solid #ddd;
+  border: 5px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 }

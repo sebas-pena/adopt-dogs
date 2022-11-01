@@ -18,7 +18,7 @@
 
 .Footer {
     padding: 40px 0;
-    background-color: #142433;
+    background-color: #4e4083;
     margin-top: 40px;
 }
 
@@ -83,22 +83,24 @@
 
 /*=====================================================================================================================================================================================*/
 
+/* | Scrol | */
+
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #142433;
+    background: #4e4083;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #1a1a1a;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #df0808;
 }
