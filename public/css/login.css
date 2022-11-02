@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body{
+    background: #142433;
+}
+
+.Contenedor-Login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.Login{
+    width: 350px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+    background: #6d44b8;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+#Checkbox{
+    display: none;
+}
+
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+.Label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.LabelI{
+	color: #6d44b8;
+	font-size: 30px;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.Input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.btn-SL{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #37235c;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+.btn-SL:hover{
+	background: #23153d;
+}
+
+.Datos{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+
+.Datos .Label{
+	color: #573b8a;
+	transform: scale(.6);
+}
+
+
+#Checkbox:checked ~ .Datos{
+	transform: translateY(-500px);
+}
+
+#Checkbox:checked ~ .Datos .Label{
+	transform: scale(1);	
+}
+
+#Checkbox:checked ~ .signup .Label{
+	transform: scale(.6);
+}
+
+
+/* | HEADER | */
+
+.Header {
+    position: relative;
+    font-weight: bolder;
+    padding: 20px;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    font-size: 16px;
+    background: #4e4083;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
+  }
+  
+  .Header nav {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: max-content;
+  }
+  
+  .Logo {
+    position: absolute;
+    color: #dbdbdb;
+  }
+  
+  .Header ul li {
+    display: inline-block;
+    position: relative;
+    color: rgb(255, 255, 255);
+  }
+  
+  .Header ul li::after {
+    content: '';
+    height: 3px;
+    border-radius: 10px;
+    width: 0;
+    background: #eeb8ff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5;
+  }
+  
+  .Header ul li:hover::after {
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+  
+  .nav-login {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  
+  .svg-login {
+    height: 18px;
+    margin-bottom: -3px;
+  }
+  
+  .Navegacion {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: auto;
+    gap: 50px;
+    list-style: none;
+  }
+  
+  .nav-link-Hom {
+    margin-right: 300px;
+    color: black;
+  }
+  
+  
+  .Cabeza {
+    display: flex;
+    background: #4e4083;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px 20px 15px;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  /* | FIN HEADER | */
+  
