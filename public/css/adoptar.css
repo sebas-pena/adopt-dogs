@@ -1,5 +1,5 @@
 body {
-    background: #4e4083;
+    background: #142433;
 }
 
 /* | HEADER | */
@@ -37,7 +37,7 @@ body {
     height: 3px;
     border-radius: 10px;
     width: 0;
-    background: #4e4083;
+    background: #dedede;
     position: absolute;
     left: 0;
     bottom: -10px;

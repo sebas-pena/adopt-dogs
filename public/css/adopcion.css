@@ -9,7 +9,7 @@ ol {
 }
 
 body {
-  background: #d7dacf;
+  background: #142433;
 }
 
 /*=====================================================================================================================================================================================*/
@@ -48,7 +48,7 @@ body {
   height: 3px;
   border-radius: 10px;
   width: 0;
-  background: #250e77;
+  background: #dbdbdb;
   position: absolute;
   left: 0;
   bottom: -10px;
