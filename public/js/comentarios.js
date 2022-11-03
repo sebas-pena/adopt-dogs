@@ -1,20 +1,5 @@
 const commentsList = document.querySelector("#comments-list")
 const user = localStorage.getItem("user") || null
-
-/* 
-
-<p class="login-message">Inicia sesión para enviar un comentario</p>
-      <form id="comment-form" class="add-comment-ctn">
-        <p id="comment__username">@NombreUsuario</p>
-        <textarea
-          type="text"
-          placeholder="Escribe tu comentario..."
-          id="comment"
-        ></textarea>
-        <button>Enviar</button>
-      </form>
-
-*/
 const main = document.querySelector("main")
 
 if (user) {
@@ -44,7 +29,7 @@ if (user) {
     // Si el input esta vacio agrega la clase error, sino envia el comentario
     if (commentEl.value) {
       commentEl.classList.remove("error")
-      fetch("http://localhost:8080/api/comments", {
+      fetch("api/comments", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -54,11 +39,10 @@ if (user) {
           content: commentEl.value
         })
       })
-
-      createComment({
-        author: user,
-        content: commentEl.value
-      })
+        .then(res => res.json())
+        .then(data =>
+          createComment(data)
+        )
 
       commentEl.value = ""
 
@@ -76,7 +60,7 @@ if (user) {
 
 // Recupera los comentarios en la api y los renderiza
 
-fetch("http://localhost:8080/api/comments")
+fetch("api/comments")
   .then(res => res.json())
   .then(comments => {
     comments.forEach(comment => {
@@ -106,7 +90,6 @@ const createComment = (comment) => {
     const commentEl = commentCtn.querySelector(".comment")
     editBtn.addEventListener("click", () => {
       commentEl.classList.toggle("input")
-      console.log("clicked")
       if (editable == false) {
         editable = true
         editBtn.textContent = "Actualizar"
@@ -116,7 +99,7 @@ const createComment = (comment) => {
         editable = false
         commentEl.setAttribute("contenteditable", "false")
         editBtn.textContent = "Editar"
-        fetch(`http://localhost:8080/api/comments/${comment.id}`, {
+        fetch(`api/comments/${comment.id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json"
@@ -127,9 +110,10 @@ const createComment = (comment) => {
         })
       }
     })
+    console.log(comment)
     commentCtn.querySelector(".comment__delete").addEventListener("click", () => {
       commentCtn.remove()
-      fetch(`http://localhost:8080/api/comments/${comment.id}`, {
+      fetch(`api/comments/${comment.id}`, {
 
         method: "DELETE"
       })

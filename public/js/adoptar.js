@@ -7,6 +7,9 @@ fetch(`https://api.TheDogAPI.com/v1/images/search?breed_ids=${breedId}`, {
 })
 	.then(res => res.json())
 	.then(data => {
+		if (data.length == 0) {
+			location.href = "404"
+		}
 		console.log(data)
 		const image = data[0].url
 		const breed = data[0].breeds[0]
@@ -18,8 +21,8 @@ fetch(`https://api.TheDogAPI.com/v1/images/search?breed_ids=${breedId}`, {
 							src="${image}"
 					/>
 					<div class="card__body">
-							<p class="card__name">African Hunting Dog</p>
-							<p class="card__detail">Edad: ${breed.life_span} años</p>
+							<p class="card__name">${breed.name}</p>
+							<p class="card__detail">Edad: ${breed.life_span}</p>
 							<p class="card__detail">Temperamento: ${breed.temperament}</p>
 							<p class="card__detail">Peso: ${breed.weight.metric} Kg</p>
 							<p class="card__detail">Altura: ${breed.height.metric} cm</p>

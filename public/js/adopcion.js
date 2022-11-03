@@ -8,7 +8,7 @@ const showDogs = (dogs) => {
 
     const dogElement = document.createElement("li")
     dogElement.innerHTML = `
-      <a href="adoptar.html?breed=${id}">
+      <a href="adoptar?breed=${id}">
         <img class="img-dog" src="${image.url}"/>
         <p class="dog__breed">${name}</p>
         <p class="dog__age">${life_span.split(" ").shift()} Años</p>
@@ -34,7 +34,7 @@ fetch("https://api.thedogapi.com/v1/breeds", {
       breedButton.innerHTML = `<button >${name}</button>`
       breedsListElem.appendChild(breedButton)
       breedButton.querySelector("button").addEventListener("click", () => {
-        location.href = `adoptar.html?breed=${id}`
+        location.href = `adoptar?breed=${id}`
       })
     })
     const dogsToShow = data.slice(0, 12)
