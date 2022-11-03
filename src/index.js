@@ -1,7 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const path = require("path")
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
 const app = express()
 
@@ -21,3 +21,5 @@ app.get('*', function (req, res) {
 app.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`)
 })
+
+module.exports = app
