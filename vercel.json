@@ -12,8 +12,32 @@
 	],
 	"routes": [
 		{
-			"src": "/*",
-			"dest": "/index.js"
+			"src": "/api/(.*)",
+			"dest": "index.js"
+		},
+		{
+			"src": "/adopcion",
+			"dest": "public/adopcion.html"
+		},
+		{
+			"src": "/adoptar",
+			"dest": "public/adoptar.html"
+		},
+		{
+			"src": "/comentarios",
+			"dest": "public/comentarios.html"
+		},
+		{
+			"src": "/suscripcion",
+			"dest": "public/suscripcion.html"
+		},
+		{
+			"src": "/login",
+			"dest": "public/login.html"
+		},
+		{
+			"src": "/(.+)",
+			"dest": "public/$1"
 		}
 	]
 }
