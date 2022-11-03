@@ -3,12 +3,17 @@ global.users = []
 
 const signup = (req, res) => {
   try {
-    const { email } = req.body
-    if (global.users.find(user => user.email === email) === undefined) {
+    const { email, username } = req.body
+    const userInGlobal = global.users.find(user => user.email === email || user.username === username)
+    if (userInGlobal === undefined) {
       global.users.push(req.body)
       res.status(201).end()
     } else {
-      throwHttpError(res, 409, "Email alredy in use")
+      if (userInGlobal.email === email) {
+        throwHttpError(res, 409, "Email alredy in use")
+      } else {
+        throwHttpError(res, 409, "Username alredy in use")
+      }
     }
 
   } catch (error) {
