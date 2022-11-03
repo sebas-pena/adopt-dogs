@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/login.css" />
+		<script src="./js/login.js" defer></script>
+		<script src="./js/init.js" defer></script>
+		<title>Login</title>
+	</head>
+	<body>
+		<header class="header secondary">
+			<div class="header-ctn">
+				<a class="logo" href="./Home.html">Adopt | Dog</a>
+				<nav class="navbar">
+					<ul>
+						<li>
+							<a href="./adopcion.html">Adopcion</a>
+						</li>
+						<li>
+							<a href="./comentarios.html">Comentarios</a>
+						</li>
+						<li>
+							<a href="./suscripcion.html">Suscribirse</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="mt">
+			<div class="Contenedor-Login">
+				<div class="Login">
+					<input type="checkbox" id="Checkbox" aria-hidden="true" />
+
+					<div class="signup">
+						<form id="signup">
+							<label class="Label" for="Checkbox" aria-hidden="true"
+								>Registrarse</label
+							>
+							<input
+								class="Input"
+								type="text"
+								name="txt"
+								placeholder="Nombre"
+								required=""
+								id="signup-username"
+							/>
+							<input
+								class="Input"
+								type="email"
+								name="email"
+								placeholder="Email"
+								required=""
+								id="signup-email"
+							/>
+							<input
+								class="Input"
+								type="password"
+								name="pswd"
+								placeholder="Contraseña"
+								required=""
+								id="signup-password"
+							/>
+							<button class="btn-SL">Registrarse</button>
+							<p id="signup-error" class="error hidden"></p>
+						</form>
+					</div>
+
+					<div class="Datos">
+						<form id="login">
+							<label class="LabelI" for="Checkbox" aria-hidden="true"
+								>Iniciar sesión</label
+							>
+							<input
+								class="Input"
+								type="email"
+								name="email"
+								placeholder="Email"
+								required=""
+								id="login-email"
+							/>
+							<input
+								class="Input"
+								type="password"
+								name="pswd"
+								placeholder="Contraseña"
+								required=""
+								id="login-password"
+							/>
+							<button class="btn-SL">Iniciar sesión</button>
+							<p id="login-error" class="error hidden"></p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+/* css normalize */
+
+:root {
+    --Violet: #4e4083;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1
+}
+main.mt{
+    padding-top: 62px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*=====================================================================================================================================================================================*/
+
+/* | Headers | */
+
+header {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    padding: 20px;
+    width: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.header-ctn{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header.secondary {
+    border-bottom: 1px solid #4e4083;
+}
+
+header.secondary a {
+    color: #4e4083;
+    font-weight: 500;
+}
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: max-content;
+}
+
+
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translate(0 , -50%);
+    left: 20px;
+    color: var(--Violet);
+}
+.header-user{
+    position: absolute;
+    top: 50%;
+    transform: translate(0 , -50%);
+    right: 20px;
+}
+.header-user a {
+    display: flex;
+}
+
+.header ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.header ul li::after {
+    content: '';
+    height: 3px;
+    border-radius: 10px;
+    width: 0;
+    background: #cbd3ffaf;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5;
+}
+
+.header ul li:hover::after {
+    width: 100%;
+}
+
+
+.navbar ul {
+    display: flex;
+    padding: 0 20px;
+    gap: 50px;
+    list-style: none;
+}
+
+/* | Fin Headers | */
+
+/*=====================================================================================================================================================================================*/
+
+/* | Footer | */
+
+.Footer {
+    padding: 40px 0;
+    background-color: #4e4083;
+}
+
+.Footer .Social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 25px;
+}
+
+.Footer .Social a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.55;
+}
+
+.Footer .Social a:hover {
+    opacity: 0.9;
+}
+
+.Footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    color: #fdfdfd;
+}
+
+.Footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.Footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.Footer ul li:hover {
+    opacity: 1;
+}
+
+.Footer .Copyrigth {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+
+/* | Fin Footer | */
+
+/*=====================================================================================================================================================================================*/
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

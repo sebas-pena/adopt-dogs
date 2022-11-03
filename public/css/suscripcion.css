@@ -1,0 +1,98 @@
+body{
+	background-position: center;
+	background-image: url(https://media.istockphoto.com/vectors/abstract-style-seamless-pattern-with-geometric-shapes-and-dog-food-vector-id870897936?k=20&m=870897936&s=612x612&w=0&h=s_AL0grxIQevojp7ck7-pXscmf2yzuymykM5Q6Xkb_w=);
+	background-repeat: repeat;
+}
+
+.Contenedor-Suscripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+.subscribe {
+  position: relative;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  overflow: hidden;
+	background: #3f51b58f;
+  width: 100%;
+  max-width: 945px;
+	height: 474px;
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+	color:#fff
+}
+
+
+.subscribe__title {
+	font-weight: bold;
+	font-size: 46px;
+	margin-bottom: 28px;
+}
+
+.subscribe__copy {
+	max-width: 550px;
+	text-align: center;
+	margin-bottom: 40px;
+	line-height: 1.5;
+	font-size: 20px;
+}
+
+.form {
+	margin-bottom: 25px;
+}
+
+.form__email {
+	height: 65px;
+	padding: 0 25px;
+	border-radius: 5px;
+ 	border: 1px solid #CAD3DB;
+	width: 400px;
+	font-size: 18px;
+	color: #000000;
+}
+
+.form__email:focus {
+	outline: 1px solid #000000;
+}
+
+.form__button {
+	background:#fb4b87;
+	padding: 10px;
+	border: none;
+	width: 150px;
+	height: 65px;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 18px;
+	color: white;
+	transition: 0.75s;
+}
+
+.form__button:hover {
+    background: #e91e63;
+}
+
+.notice {
+	max-width: 500px;
+	font-size: 18px;
+}
+
+
+.Huella404{
+    position: absolute;
+    top: calc(100% - 77px);
+    left: 20px;
+}
+
+.Huelle404{
+    position: absolute;
+    top: -15px;
+    right:20px;
+    transform: rotate(180deg);
+}
