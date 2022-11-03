@@ -2,16 +2,17 @@
 
 const dogsListElem = document.querySelector("#dogs-ctn")
 const showDogs = (dogs) => {
+  console.log(dogs)
   dogs.forEach(dog => {
-    const { name, image, life_span } = dog
+    const { name, image, life_span, id } = dog
 
     const dogElement = document.createElement("li")
     dogElement.innerHTML = `
-      <img class="img-dog" src="${image.url}"/>
-      <p class="Parrafo">Nombre: ${name}</p>
-      <p class="Parrafo">Edad: ${life_span.split(" ").shift()}</p>
-      <p class="Parrafo">El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes </p>
-      <a href="./404.html"><button class="btn-adopt">Ver Mas</button></a>
+      <a href="adoptar.html?breed=${id}">
+        <img class="img-dog" src="${image.url}"/>
+        <p class="dog__breed">${name}</p>
+        <p class="dog__age">${life_span.split(" ").shift()} Años</p>
+      </a>
     `
     dogsListElem.appendChild(dogElement)
   })

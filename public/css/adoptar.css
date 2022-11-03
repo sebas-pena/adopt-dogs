@@ -1,99 +1,50 @@
-body {
-    background: #142433;
+.card-ctn{
+  display:grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px
 }
 
-/* | HEADER | */
-
-.Header {
-    position: relative;
-    padding: 20px;
-    width: 100%;
-    backdrop-filter: blur(3px);
-    font-size: 16px;
-    background: #142433;
-    box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
+.card{
+  width: 100%;
+  max-width: 500px;
+  background-color: #f0f0f0ab;
+  border-radius: 10px;
+  border: 1px solid #80808066;
+  overflow: hidden;
 }
 
-.Header nav {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    width: max-content;
+.card__body{
+  padding: 10px
 }
 
-.Logo {
-    position: absolute;
-    color: #dedede;
+.card__img{
+  width: 100%;
 }
 
-.Header ul li {
-    display: inline-block;
-    position: relative;
-    color: rgb(255, 255, 255);
+.card__name{
+  text-align: center;
+  font-size: 20px;
 }
 
-.Header ul li::after {
-    content: '';
-    height: 3px;
-    border-radius: 10px;
-    width: 0;
-    background: #dedede;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5;
+.card__detail{
+  line-height: 1.5;
 }
 
-.Header ul li:hover::after {
-    width: 100%;
+.card button{
+  width: 100%;
+  height: 42px;
+  margin-top: 10px;
+  background-color: #4977d6;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
+.card button:hover{
+  background-color: #3f51b5;
 }
-
-.nav-login {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-
-.svg-login {
-    height: 18px;
-    margin-bottom: -3px;
-}
-
-.Navegacion {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    margin: auto;
-    gap: 50px;
-    list-style: none;
-}
-
-.nav-link-Hom {
-    margin-right: 300px;
-    color: black;
-}
-
-
-.Cabeza {
-    display: flex;
-    background: #142433;
-    color: rgb(255, 255, 255);
-    flex-direction: column;
-    align-items: center;
-    margin: 0 15px 20px 15px;
-    border-radius: 0px 0px 10px 10px;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    font-size: 30px;
-    box-shadow: 0 -5px 33px rgba(0, 0, 0, 0.5);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/* | FIN HEADER | */
