@@ -11,11 +11,11 @@ app.use(express.json())
 app.use(express.static("public", { extensions: ['html'] }))
 
 // Añade rutas
-app.use("/api", require("./routes"))
+app.use("/api", require("./src/routes"))
 
 // Manejar 404
 app.get('*', function (req, res) {
-  res.status(404).sendFile(path.join(__dirname, "../public/404.html"));
+  res.status(404).sendFile(path.join(__dirname, "./public/404.html"));
 });
 
 app.listen(PORT, () => {
