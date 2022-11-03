@@ -3,11 +3,13 @@
 	"builds": [
 		{
 			"src": "index.js",
-			"use": "@vercel/node"
+			"use": "@vercel/node",
+			"config": { "includeFiles": ["src/**"] }
 		},
 		{
 			"src": "public/**",
-			"use": "@vercel/static"
+			"use": "@vercel/static",
+			"config": { "includeFiles": ["public/**"] }
 		}
 	],
 	"routes": [
@@ -16,24 +18,8 @@
 			"dest": "index.js"
 		},
 		{
-			"src": "/adopcion",
-			"dest": "public/adopcion.html"
-		},
-		{
-			"src": "/adoptar",
-			"dest": "public/adoptar.html"
-		},
-		{
-			"src": "/comentarios",
-			"dest": "public/comentarios.html"
-		},
-		{
-			"src": "/suscripcion",
-			"dest": "public/suscripcion.html"
-		},
-		{
-			"src": "/login",
-			"dest": "public/login.html"
+			"src": "/",
+			"dest": "public/index.html"
 		},
 		{
 			"src": "/(.+)",
