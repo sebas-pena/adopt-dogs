@@ -23,7 +23,8 @@
 		},
 		{
 			"src": "/(.+)",
-			"dest": "index.js"
+			"dest": "public/$1"
 		}
-	]
+	],
+	"cleanUrls": true
 }
