@@ -9,7 +9,7 @@ loginForm.addEventListener("submit", (e) => {
   const password = document.querySelector("#login-password").value
   const loginErrorEl = document.querySelector("#login-error")
 
-  fetch("http://localhost:8080/api/auth/login", {
+  fetch("api/auth/login", {
     method: "POST",
     headers: {
       "content-type": "application/json"
@@ -41,7 +41,7 @@ signupForm.addEventListener("submit", (e) => {
   const username = document.querySelector("#signup-username").value
   const signupErrorEl = document.querySelector("#signup-error")
 
-  fetch("http://localhost:8080/api/auth/signup", {
+  fetch("api/auth/signup", {
     method: "POST",
     headers: {
       "content-type": "application/json"
