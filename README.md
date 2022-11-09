@@ -12,3 +12,8 @@ https://adoptdog.cyclic.app/
 ![Home](https://cdn.discordapp.com/attachments/789169114686029906/1039148716495474688/image.png "Home")
 <br>
 ![Comments](https://cdn.discordapp.com/attachments/789169114686029906/1039149086378565712/image.png "Comentarios")
+
+## Integrantes
+-Pablo Peña
+-Federico Del Rio
+-Gaston
